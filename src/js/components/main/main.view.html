@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Main View</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body ng-cloak>
+    <!-- sample angular code -->
+    <div class="container">
+      <div ng-controller="mainController as mainCtrl">
+        <ul ng-repeat="kitten in mainCtrl.kittens">
+          <li>{{kitten.name}}</li>
+          <li><img ng-src="{{kitten.pic_url}}"></li>
+          <li>{{kitten.bio}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
