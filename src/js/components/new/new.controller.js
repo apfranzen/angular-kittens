@@ -6,11 +6,18 @@
     .module('myApp.components.new', [])
     .controller('newController', newController);
 
-  newController.$inject = ['$scope'];
+  newController.$inject = ['$rootScope'];
 
-  function newController($scope) {
+  function newController($rootScope, newKitten) {
     /*jshint validthis: true */
     this.greeting = 'Hello World!';
+
+    console.log('rootScope: ', $rootScope);
+
+    this.add = function(newKitten) {
+      $rootScope.kittens.push(newKitten);
+      console.log(newKitten);
+    };
   }
 
 })();

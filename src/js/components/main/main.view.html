@@ -10,12 +10,11 @@
   <body ng-cloak>
     <!-- sample angular code -->
     <div class="container">
-      <div ng-controller="mainController as mainCtrl">
-        <ul ng-repeat="kitten in mainCtrl.kittens">
-          <li>{{kitten.name}}</li>
-          <li><img ng-src="{{kitten.pic_url}}"></li>
-          <li>{{kitten.bio}}</li>
-        </ul>
+      <ul ng-repeat="kitten in kittens">
+        <li>{{kitten.name}}</li>
+        <li><img ng-src="{{kitten.pic_url}}"></li>
+        <li>{{kitten.bio}}</li>
+      </ul>
       </div>
     </div>
 
